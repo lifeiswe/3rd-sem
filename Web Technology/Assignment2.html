@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG-circle</title>
+    <style>
+        h1{
+            text-align:center;
+        }
+        .block{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        p{
+            text-align:center;
+        }
+        header{
+            text-align:center;
+            font-size:50px;
+            color:blue;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example of SVG-circle</h1>
+    <div class="block">
+    <svg width="500" height="500">
+        <circle cx="150" cy="150" r="70" fill="black" stroke-width="5" stroke="red"/>
+        <text x="150" y="150" text-anchor="middle" fill="lightgreen">PES1UG22CS181</text>
+    </svg>
+    </div>
+
+    <header id="head">Halo 2 Video Game</header>
+
+    <p id="para">The prize is $50.0</p>
+
+    <script>
+        var he=document.getElementById("head");
+        he.addEventListener("click",()=>{
+            alert("The discount sale is going to end!");
+        });
+        var pa=document.getElementById("para");
+        pa.addEventListener("click",()=>{
+            pa.style.color="red";
+            pa.style.fontSize="35px";
+        });
+    </script>
+</body>
+</html>
