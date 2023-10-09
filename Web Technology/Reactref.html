@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        class Counter extends React.Component{
+            constructor(props){
+                super(props);
+                this.myrefs=React.createRef();
+                this.myrefs.current={value:0};
+            }
+            render(){
+                    alert("Rendering")
+                    return(<div>
+                        <button onClick={this.decrement}>SUB</button>
+                        <input type="text" ref= {this.myrefs}></input>
+                        <button onClick={this.increment}>ADD</button>
+                        </div>);
+                }
+                increment=()=>{
+                this.myrefs.current.value++;
+                }
+                decrement=()=>{
+                this.myrefs.current.value--;
+                }
+            }
+        ReactDOM.render(<div>
+            <Counter/>
+            </div>,document.querySelector("#container"));
+    </script>
+</body>
+</html>
