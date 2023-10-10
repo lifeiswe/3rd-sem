@@ -1,5 +1,4 @@
-`include "lib.v"
-`include "alu.v"
+
 
 module reg16(input wire clk,reset,load,input wire [15:0]din,output wire [15:0]r);
 	dfrl d0(clk,reset,load,din[0],r[0]);
