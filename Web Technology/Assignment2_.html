@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="jquery-3.6.0.js "></script>
+    <style>
+        #d1{
+            display: none;
+            background-color: lightblue;
+            padding: 10px;
+            
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <p id="para">This is paragraph!</p>
+    <script>
+        $(document).ready(function(){
+            var bold=$('<b>"I love jQuery!!"</b>');
+            $("#para").prepend(bold);
+        });
+
+        $(document).ready(function() {
+      $('#btn-1').click(function() {
+        $('#d1').fadeToggle();
+      });
+    });
+    </script>
+    <button id="btn-1">Toggle Element</button>
+    <div id="d1">
+    <p>This is hidden div element</p>
+    <p>This is hidden div element</p>
+    <p>This is hidden div element</p>
+    </div>
+</body>
+</html>
